@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { addNowPlayingMovies } from "../redux/movieSlice";
+// import { addNowPlayingMovies } from "../redux/movieSlice";
 import { API_OPTIONS } from "../utils/constants";
 
 const useNowPlayingMovies = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   useEffect(() => {
     getNowPlayingMovies();
   }, []);
@@ -16,7 +16,7 @@ const useNowPlayingMovies = () => {
         API_OPTIONS
       );
       const response = await data.json();
-      dispatch(addNowPlayingMovies(response.results));
+      // dispatch(addNowPlayingMovies(response.results));
     } catch (e) {}
   };
 };

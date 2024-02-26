@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 
 const MainContainer = () => {
     const [mainMovie, setMainMovie] = useState(null);
-    const movies = useSelector((store) => store?.movies?.nowPlayingMovies) 
+    const movies = useSelector((store) => store?.movies?.nowPlayingMovies)
     const getRandomElement = (array) => {
         return array[Math.floor(Math.random() * array.length)];
     }
